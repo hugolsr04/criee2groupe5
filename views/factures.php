@@ -14,19 +14,19 @@
         <table class="table table-bordered">
             <thead class="thead-dark">
                 <tr>
-                    <th>Numéro de Facture</th>
-                    <th>Montant Total</th>
-                    <th>Date d'échéance</th>
-                    <th>Statuts</th>
+                    <th>Numéro de la facture</th>
+                    <th>Montant hors taxes</th>
+                    <th>Date de facturation</th>
+                    <th>Statut</th>
                 </tr>
             </thead>
             <tbody>
                 <?php if (!empty($factures)): ?>
                     <?php foreach ($factures as $facture): ?>
                         <tr>
-                            <td><?= $facture['numero_facture']; ?></td>
-                            <td><?= $facture['montant_total']; ?></td>
-                            <td><?= $facture['date_echeance']; ?></td>
+                            <td><?= $facture['id']; ?></td>
+                            <td><?= $facture['montantHT']; ?></td>
+                            <td><?= $facture['dateFacture']; ?></td>
                             <td><?= $facture['statut']; ?></td>
                         </tr>
                     <?php endforeach; ?>

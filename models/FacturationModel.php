@@ -1,4 +1,5 @@
 <?php
+
 require_once '../config/database.php';
 
 class FacturationModel
@@ -12,9 +13,16 @@ class FacturationModel
 
     public function getFacturesEnCours()
     {
-        $query = "SELECT * FROM factures WHERE statut = 'en_cours'";
-        $stmt = $this->conn->query($query);
-        return $stmt->fetchAll(PDO::FETCH_ASSOC);
+        try {
+            $query = "SELECT * FROM facture WHERE statut = 'en_cours'";
+            $stmt = $this->conn->prepare($query);
+            $stmt->execute();
+
+            return $stmt->fetchAll(PDO::FETCH_ASSOC);
+        } catch (PDOException $exception) {
+            echo "Erreur de requête : " . $exception->getMessage();
+            return array();
+        }
     }
 }
 ?>
