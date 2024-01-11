@@ -10,29 +10,27 @@ body {
     background-color: #F7F7F3;
     padding: 20px;
     border-radius: 10px;
+    margin-top: 50px;
+    border: 2px solid #BE2F35;
 }
 
 h1 {
     color: #BE2F35;
 }
 
-.table-container {
-    margin-top: 50px;
-}
-
-.table-container table {
-    width: 100%;
+table {
+    background-color: #F7F7F3;
     border-collapse: collapse;
-    margin-top: 20px;
+    width: 100%;
 }
 
-.table-container th, .table-container td {
-    border: 1px solid #000;
-    padding: 8px;
+th, td {
     text-align: center;
+    padding: 8px;
+    border: 1px solid #BE2F35;
 }
 
-.table-container thead {
+thead {
     background-color: #BE2F35;
     color: #FFFFFF;
 }
