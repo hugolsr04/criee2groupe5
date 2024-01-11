@@ -1,0 +1,31 @@
+body {
+    font-family: 'Lazord Sans Serif', sans-serif;
+    background-color: #E6E6DD;
+    color: #000000;
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    background-color: #F7F7F3;
+    padding: 20px;
+    border-radius: 10px;
+    margin-top: 50px;
+}
+
+h1 {
+    color: #BE2F35;
+}
+
+table {
+    background-color: #F7F7F3;
+}
+
+th, td {
+    text-align: center;
+}
+
+thead {
+    background-color: #BE2F35;
+    color: #FFFFFF;
+}
