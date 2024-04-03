@@ -24,7 +24,8 @@ table {
     width: 100%;
 }
 
-th, td {
+th,
+td {
     text-align: center;
     padding: 8px;
     border: 1px solid #BE2F35;
@@ -33,4 +34,53 @@ th, td {
 thead {
     background-color: #BE2F35;
     color: #FFFFFF;
+}
+
+.search-container {
+    margin-bottom: 20px;
+    position: relative;
+    display: flex;
+    align-items: center;
+}
+
+.search-input {
+    width: 100%;
+    padding: 10px 40px 10px 20px;
+    border: 2px solid #BE2F35;
+    border-radius: 5px;
+    font-size: 16px;
+    transition: all 0.3s ease;
+}
+
+.search-input:focus {
+    border-color: #AA232E;
+    box-shadow: 0 0 8px rgba(174, 35, 46, 0.4);
+}
+
+.search-button {
+    padding: 10px 20px;
+    background-color: #BE2F35;
+    color: #FFFFFF;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    margin-left: 10px;
+}
+
+.search-button:hover {
+    background-color: #AA232E;
+}
+
+.search-container::before {
+    content: "\1F50D";
+    position: absolute;
+    left: 15px;
+    color: #BE2F35;
+    font-size: 16px;
+    z-index: 10;
+}
+
+.search-input {
+    padding-left: 35px;
 }
