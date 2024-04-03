@@ -14,7 +14,7 @@
         <form action="" method="GET">
             <div class="search-container">
                 <input type="text" name="search" class="search-input"
-                    placeholder="Rechercher par Nom, Montant, Date, Statut">
+                    placeholder="Rechercher une facture...">
                 <button type="submit" class="search-button">Rechercher</button>
             </div>
         </form>
