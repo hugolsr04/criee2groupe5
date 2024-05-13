@@ -5,7 +5,6 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Afficher les factures en cours</title>
-    <!-- Inclusion de la feuille de style CSS -->
     <link rel="stylesheet" href="css/style.css">
 </head>
 
@@ -15,8 +14,7 @@
         <form action="" method="GET">
             <div class="search-container">
                 <!-- Champ de recherche pour filtrer les factures -->
-                <input type="text" name="search" class="search-input"
-                    placeholder="Rechercher une facture...">
+                <input type="text" name="search" class="search-input" placeholder="Rechercher une facture...">
                 <button type="submit" class="search-button">Rechercher</button>
             </div>
         </form>
@@ -29,6 +27,7 @@
                     <th>Montant HT</th>
                     <th>Date Facture</th>
                     <th>Statut</th>
+                    <th>Actions</th>
                 </tr>
             </thead>
             <tbody>
@@ -47,6 +46,10 @@
                             </td>
                             <td>
                                 <?= $facture['statut']; ?>
+                            </td>
+                            <td>
+                                <a href="index.php?action=supprimerFacture&id=<?= $facture['id']; ?>" class="delete-button"
+                                    onclick="return confirm('Êtes-vous sûr de vouloir supprimer cette facture ?');">Supprimer</a>
                             </td>
                         </tr>
                     <?php endforeach; ?>

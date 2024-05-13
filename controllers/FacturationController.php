@@ -27,10 +27,25 @@ class FacturationController
             $factures = array();
         }
 
-        // Inclusion des vues header.php, factures.php et footer.php pour afficher la page
-        include '../views/header.php';
+        // Inclusion la vues factures.php pour afficher la page
         include '../views/factures.php';
-        include '../views/footer.php';
+    }
+
+    public function supprimerFacture() {
+        $id = $_GET['id'] ?? null;
+        if ($id) {
+            $database = new Database();
+            $conn = $database->getConnection();
+            $facturationModel = new FacturationModel($conn);
+            if ($facturationModel->supprimerFacture($id)) {
+                $msg = "Facture supprimée avec succès.";
+            } else {
+                $msg = "Erreur lors de la suppression de la facture.";
+            }
+        } else {
+            $msg = "Aucun ID de facture spécifié.";
+        }
+        header("Location: index.php?msg=" . urlencode($msg));
     }
 }
 ?>

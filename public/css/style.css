@@ -84,3 +84,18 @@ thead {
 .search-input {
     padding-left: 35px;
 }
+
+.delete-button {
+    padding: 5px 10px;
+    background-color: #BE2F35;
+    color: #FFFFFF;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+    border: none;
+    cursor: pointer;
+}
+
+.delete-button:hover {
+    background-color: #AA232E;
+}

@@ -10,7 +10,7 @@ document.addEventListener('DOMContentLoaded', function() {
     setInterval(function() {
         // Attribution du placeholder avec le texte correspondant à l'index courant
         searchInput.setAttribute('placeholder', 'Rechercher par ' + placeholders[currentIndex] + '...');
-        // Passage à l'index suivant (modulo pour boucler sur le tableau)
+        // Passage à l'index (modulo pour boucler sur le tableau)
         currentIndex = (currentIndex + 1) % placeholders.length;
-    }, 3000); // Intervalle de 3000 millisecondes (3 secondes)
+    }, 3000); // Intervalle de 3 secondes
 });

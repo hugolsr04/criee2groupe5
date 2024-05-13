@@ -38,5 +38,18 @@ class FacturationModel
             return array();
         }
     }
+
+    public function supprimerFacture($id) {
+        try {
+            $query = "DELETE FROM facture WHERE id = :id";
+            $stmt = $this->conn->prepare($query);
+            $stmt->bindParam(':id', $id);
+            $stmt->execute();
+            return true;
+        } catch (PDOException $exception) {
+            echo "Erreur lors de la suppression : " . $exception->getMessage();
+            return false;
+        }
+    }
 }
 ?>
